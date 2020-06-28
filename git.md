@@ -8,7 +8,12 @@
 git reset --soft HEAD~1
 git reset
 ```
-Undo the last commit then unstage everything.
+Undo the last commit + unstage everything.
+
+```shell
+git stash; git reset --soft HEAD~1; git stash pop;
+```
+Stash changes + undo the last commit + re-add changes.
 
 ## Staging
 
