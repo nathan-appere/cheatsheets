@@ -2,6 +2,9 @@
 
 ## On Mac
 
+### Starting issues debug
+- https://thoughtbot.com/blog/macos-postgres-could-not-connect-to-server
+
 ### Start services with brew
 
 ```shell
