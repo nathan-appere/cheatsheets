@@ -1,7 +1,3 @@
-# cheatsheets
-Cheatsheets for things I keep forgetting.
-
-
 # PG
 
 ## On Mac
