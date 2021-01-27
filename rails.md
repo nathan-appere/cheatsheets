@@ -1,4 +1,11 @@
+---
+title: Rails
+category: Rails
+---
+
 # Rails
+
+## Configuration
 
 ### Paths
 
