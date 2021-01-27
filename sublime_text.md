@@ -1,3 +1,8 @@
+---
+title: Sublime Text
+category: Apps
+---
+
 # Sublime Text
 
 ## Selection
