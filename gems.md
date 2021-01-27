@@ -1,3 +1,8 @@
+---
+title: Gems
+category: Ruby
+---
+
 # Gems related
 
 ## Gems
@@ -8,7 +13,6 @@ gem env
 ```
 
 ### Remove all gems
-
 ```shell
 gem uninstall -aIx
 ```
@@ -16,7 +20,6 @@ gem uninstall -aIx
 ## Bundler
 
 ### Update Gemfile.lock bundler
-
 ```shell
 bundle update --bundler
 ```
