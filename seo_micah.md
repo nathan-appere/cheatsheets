@@ -1,8 +1,7 @@
 ---
 title: SEO
 category: Growth
-description: |
-  .container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples.
+description: Everything you keep forgetting about SEO!
 ---
 
 ## Important HTML Elements
