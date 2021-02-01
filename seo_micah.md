@@ -41,24 +41,35 @@ These affect how you show up in search results
 - Providing image height and width improves page speed
 
 ## Hyperlinks
+{: .-two-column}
 
-```scss
-Text Link
-<a href="https://www.example.com/webpage.
-html">Anchor Text</a>
-NoFollowed Link
-<a href="https://www.example.com/webpage.html" rel="nofollow">
-Anchor Text</a>
-Image Link
-<a href="https://www.example.com/webpage.html"><img src="/img/keyword.jpg"
-alt="description of image" height="50"
-width="100"></a>
+### Common types
 
-- Use “nofollow” for paid links and distrusted content
-- Use “sponsored” for sponsored or compensated links
-- Use “ugc” for links within user-generated content
-- For image links, the alt attribute serves as the anchor text
+Text Link:
+
+```html
+<a href="https://www.example.com/webpage.html">Anchor Text</a>
 ```
+
+NoFollowed Link:
+
+```html
+<a href="https://www.example.com/webpage.html" rel="nofollow">Anchor Text</a>
+```
+
+Image Link:
+
+```html
+<a href="https://www.example.com/webpage.html"><img src="/img/keyword.jpg" alt="description of image" height="50" width="100"></a>
+```
+
+### Tips
+
+- Use `nofollow` for paid links and distrusted content
+- Use `sponsored` for sponsored or compensated links
+- Use `ugc` for links within user-generated content
+- For image links, the `alt` attribute serves as the anchor text
+
 
 ## HTTP Status Codes
 
@@ -78,14 +89,10 @@ width="100"></a>
 ## Webmaster Tools
 {: .-one-column}
 
-```scss
-Google Search Console
-search.google.com/search-console/about
-Bing Webmaster Tools
-bing.com/toolbox/webmaster
-Yandex
-webmaster.yandex.com
-```
+### List
+- [Google Search Console](search.google.com/search-console/about)
+- [Bing Webmaster Tools](bing.com/toolbox/webmaster)
+- [Yandex](webmaster.yandex.com)
 
 ## URLs
 {: .-three-column}
@@ -94,7 +101,7 @@ webmaster.yandex.com
 
 ```text
 https://store.example.com/category/keyword?id=123#top
-1       2     3       4   5 6              7     8
+1       2     3       4   5        6      7      8
 ```
 
 | `1` | Protocol |
@@ -106,7 +113,7 @@ https://store.example.com/category/keyword?id=123#top
 | `4` | Top-level domain |
 | `8` | Named anchor |
 
-### Tips
+### Seo tips for URLs
 - Choose shorter, human-readable URLs with descriptive keywords
 - Exclude dynamic parameters when possible (see [Canonicalization](#canonicalization) and [Pagination](#pagination))
 - When possible, place content on the same subdomain to preserve authority
@@ -114,48 +121,59 @@ https://store.example.com/category/keyword?id=123#top
 ### Canonicalization
 
 - Preferred URL `https://example.com`
-Place the following in `<head>`` section to indicate preferred URL:
+Place the following in `<head>` section to indicate preferred URL:
 ```html
  <link href="https://example.com/" rel="canonical" />
 ```
 More information at: [mz.cm/canonical](mz.cm/canonical)
 
-## Robots Exclusion Standard
+## Robots Control Syntax
 
-### Example
-#### Robots.txt
+### `Robots.txt`
+
+Location: `https://example.com/robots.txt`
 ```text
-Location: https://example.com/robots.txt
 User-agent: googlebot
 Disallow: /example.html
 Sitemap: https://example.com/sitemap.xml
-More information at mz.cm/robotstxt
-X-Robots-Tag
-Location: Sent in the HTTP headers
-X-Robots-Tag: noindex
-More information at mz.cm/x-robots
-Meta Robots
-Location: In the HTML <head>
-<meta name="robots" content="[PARAMETER]" />
-More information at mz.cm/x-robots
 ```
+More information at [mz.cm/robotstxt]
+
+### `X-Robots`
+Location: Sent in the HTTP headers
+```text
+X-Robots-Tag: noindex
+```
+More information at [mz.cm/x-robots]
+
+### `Meta Robots`
+Location: In the HTML `<head>`
+```html
+<meta name="robots" content="[PARAMETER]" />
+```
+More information at [mz.cm/x-robots]
+
+### Robots Best Practices
 - Only Meta Robots and X-Robots-Tag remove URLs from search results
 - Don’t block CSS or JavaScript files with robots.txt
 
 ### Important Parameters
-- Noindex (do not index)
-- Nofollow (do not follow links)
-- Noarchive (do not show cache)
-Note that you can combine them (noindex, nofollow)
-If the robots <META> tag is not defined, the default is "INDEX, FOLLOW"
-Don’t block noindex URLs in robots.txt.
-They need to be crawled to be respected.
+
+| `Noindex` | do not index |
+| `Nofollow`  | do not follow links |
+| `Noarchive` | do not show cache |
+
+*Note that you can combine them (`noindex`, `nofollow`)*
+
+- If the robots `<META>` tag is not defined, the default is `INDEX, FOLLOW`
+- Don’t block noindex URLs in `robots.txt`: they need to be crawled to be respected.
 
 
 ## Important User Agents
 
+For `Robots.txt`, `Robots Meta Tags`, and `X-Robots-Tag`.
+
 ### List
-For Robots.txt, Robots Meta Tags, and X-Robots-Tag:
 - Googlebot (can be used as default for most Google crawlers)
 - Googlebot-News
 - Googlebot-Image
@@ -175,10 +193,10 @@ For Robots.txt, Robots Meta Tags, and X-Robots-Tag:
 
 
 ## Sitemap Syntax
+{: .-two-column}
 
-```scss
-XML Sitemap Example:
-RSS and text sitemaps are also options
+### XML Sitemap Example
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
@@ -186,7 +204,11 @@ RSS and text sitemaps are also options
  <lastmod>2019-06-04</lastmod>
  </url>
 </urlset>
-Sitemap Index File
+```
+RSS and text sitemaps are also options.
+
+### Sitemap Index File
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
@@ -198,9 +220,10 @@ Sitemap Index File
  <lastmod>2019-01-01</lastmod>
  </sitemap>
 </sitemapindex>
+```
 
-Default Location:
-https://example.com/sitemap.xml
+### Default Location:
+- https://example.com/sitemap.xml
 sitemap: parent tag for each sitemap
  loc: location of the sitemap
 lastmod: the last modified date
@@ -213,13 +236,15 @@ Other Common Sitemap Types:
 - News
 * Don't forget to submit your sitemap to Google
  via Google Search Console.
-```
 
 ## Important Social Metadata
+{: .-two-column}
+
+### Sample Meta Tag Template: `Article`
+
+Place this data between the <head> tags of your website.
 
 ```html
-Sample Meta Tag Template: "Article"
-Place this data between the <head> tags of your website.
 <!-- Required Open Graph data -->
 <meta property="og:title" content="Developer's Cheat
 Sheet to SEO" />
@@ -248,27 +273,33 @@ com/guide.mp4" />
 <meta name="twitter:description" content="Description of content">
 <meta name="twitter:image" content="https://example.
 com/unique-image.jpg">
-
-Default to Open Graph
-Platforms that support Open Graph protocol include Facebook,
-Twitter, LinkedIn, and Pinterest.
-Optimal Image Sizing
- Twitter:
- - Minimum 144x144 px
- - No larger than 4096x4096 px or 5MB
- Facebook:
- - Minimum 600x600 px
- - Try to use images that are at least 1080 px in width
 ```
 
+### Best Practices
+
+**Default to Open Graph**
+
+Platforms that support Open Graph protocol include Facebook,
+Twitter, LinkedIn, and Pinterest.
+
+**Optimal Image Sizing**
+
+- Twitter:
+  - Minimum 144x144 px
+  - No larger than 4096x4096 px or 5MB
+- Facebook:
+  - Minimum 600x600 px
+  - Try to use images that are at least 1080 px in width
+
 ## Rich Snippets and Structured Data
+
+### Info
 Enhance search results and help search engines understand your content
+- Common Vocabularies: schema.org
+- Popular Formats: JSON-LD, RDFa, Microdata
 
-
-```haml
-Common Vocabularies: schema.org
-Popular Formats: JSON-LD, RDFa, Microdata
-Breadcrumbs
+### Breadcrumbs
+```html
 <script type="application/ld+json">
 {
  "@context": "http://schema.org",
@@ -285,7 +316,10 @@ Breadcrumbs
 <---Additional list items here--->
  }]
  }</script>
-Reviews
+ ```
+
+### Reviews
+```html
 <script type="application/ld+json">
 {
  "@context": "http://schema.org/",
@@ -304,23 +338,26 @@ Reviews
  }
 }
 </script>
+```
 Review stars won’t show up in search results.
 
-Common Structured Data Types:
+### Common Structured Data Types
+
 - Local business
 - FAQ page
 - Person
 - How to
-More information at mz.cm/rich-snippets
 - Product
 - Article
 - Recipes
 - QApage
-```
+
+More information at [mz.cm/rich-snippets]
 
 ## Page Speed
 
 ### Page Speed Tips
+
 - Compress and minify your code
 - Reduce page redirects
 - Remove render-blocking JavaScript
@@ -331,10 +368,11 @@ More information at mz.cm/rich-snippets
 - Analyze your critical rendering path performance for additional opportunities in Chrome Dev Tools
 
 ### Page Speed Tools
-- Test your Page Speed with Lighthouse: developers.google.com/web/tools/lighthouse
-- PageSpeed Insights: developers.google.com/speed/pagespeed/insights
-- GTmetrix: gtmetrix.com
-- WebPageTest: webpagetest.org
+
+- Test your Page Speed with [Lighthouse](developers.google.com/web/tools/lighthouse)
+- PageSpeed [Insights](developers.google.com/speed/pagespeed/insights)
+- [GTmetrix](gtmetrix.com)
+- {WebPageTest](webpagetest.org)
 
 ### Image Optimization
 
@@ -345,7 +383,7 @@ The most common culprit of poor page speed is images!
 - Explore lazy loading
 - Leverage SRCSET for different screen sizes
 - Ensure that your images have alt text
-- Invest in automated tools that can help ensure your image assets will always be optimized (example: mz.cm/imageopt)
+- Invest in automated tools that can help ensure your image assets will always be optimized (example: [mz.cm/imageopt])
 
 ## Modern JavaScript Sites
 
@@ -353,5 +391,5 @@ The most common culprit of poor page speed is images!
 - Keep JavaScript bundles small (especially for mobile devices). Small bundles improve speed, lower memory usage, and reduce CPU costs.
 - Use server-side or pre-rendering to improve site speed, user experience, and crawler accessibility.
 - Stuck with client-side rendering? Try pre-rendering to help Googlebot get a more immediate HTML snapshot of your page.
-- Use Chrome Dev Tools “Performance” tab to test your runtime performance and network “throttling” to simulate different device capabilities.
+- Use Chrome Dev Tools `Performance` tab to test your runtime performance and network “throttling” to simulate different device capabilities.
 - Explore Chrome DevTools’ Timeline & JavaScript Profiler to analyze the impact of your JavaScript.
