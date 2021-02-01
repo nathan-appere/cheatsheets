@@ -6,6 +6,7 @@ description: |
 ---
 
 ## Important HTML Elements
+
 These affect how you show up in search results
 
 ### Title Tag
@@ -16,10 +17,9 @@ These affect how you show up in search results
 </head>
 ```
 
-• Best between 50–60 characters
-• Important keywords near the beginning
-• Well-written descriptions influence
- click-through rates (CTR)
+- Best between 50–60 characters
+- Important keywords near the beginning
+- Well-written descriptions influence click-through rates (CTR)
 
 ### Meta Description Tag
 
@@ -29,10 +29,9 @@ These affect how you show up in search results
 </head>
 ```
 
-• Best around 160 characters
-• Each description should be unique
-• Well-written descriptions influence
- click-through rates (CTR)
+- Best around 160 characters
+- Each description should be unique
+- Well-written descriptions influence click-through rates (CTR)
 
 ### Image
 
@@ -40,7 +39,7 @@ These affect how you show up in search results
 <img src="img/keyword.jpg" alt="description of image" width="100" height="100">
 ```
 
-• Providing image height and width improves page speed
+- Providing image height and width improves page speed
 
 ## Hyperlinks
 
