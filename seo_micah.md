@@ -137,21 +137,21 @@ User-agent: googlebot
 Disallow: /example.html
 Sitemap: https://example.com/sitemap.xml
 ```
-More information at [mz.cm/robotstxt]
+More information at [mz.cm/robotstxt](mz.cm/robotstxt)
 
 ### `X-Robots`
 Location: Sent in the HTTP headers
 ```text
 X-Robots-Tag: noindex
 ```
-More information at [mz.cm/x-robots]
+More information at [mz.cm/x-robots](mz.cm/x-robots)
 
 ### `Meta Robots`
 Location: In the HTML `<head>`
 ```html
 <meta name="robots" content="[PARAMETER]" />
 ```
-More information at [mz.cm/x-robots]
+More information at [mz.cm/x-robots](mz.cm/x-robots)
 
 ### Robots Best Practices
 - Only Meta Robots and X-Robots-Tag remove URLs from search results
@@ -352,7 +352,7 @@ Review stars won’t show up in search results.
 - Recipes
 - QApage
 
-More information at [mz.cm/rich-snippets]
+More information at [mz.cm/rich-snippets](mz.cm/rich-snippets)
 
 ## Page Speed
 
@@ -372,7 +372,7 @@ More information at [mz.cm/rich-snippets]
 - Test your Page Speed with [Lighthouse](developers.google.com/web/tools/lighthouse)
 - PageSpeed [Insights](developers.google.com/speed/pagespeed/insights)
 - [GTmetrix](gtmetrix.com)
-- {WebPageTest](webpagetest.org)
+- [WebPageTest](webpagetest.org)
 
 ### Image Optimization
 
