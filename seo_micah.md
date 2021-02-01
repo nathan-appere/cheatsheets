@@ -1,6 +1,6 @@
 ---
 title: SEO
-category: Growth, SEO
+category: Growth
 description: |
   .container .row .col-md-6, @screen-sm-min, .form-control, grids, .modal-content, tooltips, and other Bootstrap CSS examples.
 ---
