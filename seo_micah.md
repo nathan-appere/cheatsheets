@@ -55,27 +55,24 @@ Image Link
 alt="description of image" height="50"
 width="100"></a>
 
-Use “nofollow” for paid links and
- distrusted content
-• Use “sponsored” for sponsored or
- compensated links
-• Use “ugc” for links within user-generated
- content
-• For image links, the alt attribute serves as the
- anchor text
+- Use “nofollow” for paid links and distrusted content
+- Use “sponsored” for sponsored or compensated links
+- Use “ugc” for links within user-generated content
+- For image links, the alt attribute serves as the anchor text
 ```
 
 ## HTTP Status Codes
 
-```scss
-200 OK/Success
-301 Permanent redirect
-302 Temporary redirect
-404 Not found
-410 Gone (permanently removed)
-500 Server error
-503 Unavailable (retry later
-```
+| Code   | Meaning                    |
+| ---    | ---                        |
+| `200`  | OK/Success                 |
+| `301`  | Permanent redirect         |
+| `302`  | Temporary redirect         |
+| `404`  | Not found                  |
+| `410`  | Gone (permanently removed) |
+| `500`  | Server error               |
+| `503`  | Unavailable (retry later   |
+
 
 ## Webmaster Tools
 
@@ -324,50 +321,44 @@ More information at mz.cm/rich-snippets
 
 ## Page Speed
 
-```haml
-Page Speed Tips:
-• Compress and minify your code
-• Reduce page redirects
-• Remove render-blocking JavaScript
-• Use treeshaking
-• Leverage browser caching
-• Use a CDN
-• Leverage preconnect, prefetch and preload
-• Analyze your critical rendering path performance for additional opportunities
- in Chrome Dev Tools.
-Test your Page Speed with:
- Lighthouse: developers.google.com/web/tools/lighthouse
-PageSpeed Insights: developers.google.com/speed/pagespeed/insights
- GTmetrix: gtmetrix.com
- WebPageTest: webpagetest.org
-```
+### Page Speed Tips
+- Compress and minify your code
+- Reduce page redirects
+- Remove render-blocking JavaScript
+- Use treeshaking
+- Leverage browser caching
+- Use a CDN
+- Leverage preconnect, prefetch and preload
+- Analyze your critical rendering path performance for additional opportunities in Chrome Dev Tools
+
+### Page Speed Tools
+- Test your Page Speed with Lighthouse: developers.google.com/web/tools/lighthouse
+- PageSpeed Insights: developers.google.com/speed/pagespeed/insights
+- GTmetrix: gtmetrix.com
+- WebPageTest: webpagetest.org
 
 ## Image Optimization
+
 The most common culprit of poor page speed is images!
 
-```haml
 Image Optimization Tips:
-• Compress your images & experiment with quality settings
-• Remove unnecessary image metadata
-• Explore lazy loading
-• Leverage SRCSET for different screen sizes
-• Ensure that your images have alt text
-• Invest in automated tools that can help ensure your image assets will always
- be optimized (example: mz.cm/imageopt)
-```
+- Compress your images & experiment with quality settings
+- Remove unnecessary image metadata
+- Explore lazy loading
+- Leverage SRCSET for different screen sizes
+- Ensure that your images have alt text
+- Invest in automated tools that can help ensure your image assets will always be optimized (example: mz.cm/imageopt)
 
 ## Modern JavaScript Sites
 
-```html
 JavaScript Tips:
-• Keep JavaScript bundles small (especially for mobile devices). Small bundles improve
+- Keep JavaScript bundles small (especially for mobile devices). Small bundles improve
  speed, lower memory usage, and reduce CPU costs.
-• Use server-side or pre-rendering to improve site speed, user experience,
+- Use server-side or pre-rendering to improve site speed, user experience,
  and crawler accessibility.
-• Stuck with client-side rendering? Try pre-rendering to help Googlebot get a
+- Stuck with client-side rendering? Try pre-rendering to help Googlebot get a
  more immediate HTML snapshot of your page.
-• Use Chrome Dev Tools “Performance” tab to test your runtime performance
+- Use Chrome Dev Tools “Performance” tab to test your runtime performance
  and network “throttling” to simulate different device capabilities.
-Explore Chrome DevTools’ Timeline & JavaScript Profiler to analyze the impact
+- Explore Chrome DevTools’ Timeline & JavaScript Profiler to analyze the impact
 of your JavaScript.
-```
