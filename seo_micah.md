@@ -63,6 +63,7 @@ width="100"></a>
 ## HTTP Status Codes
 
 ### Important status codes
+
 | Code   | Meaning                    |
 | ---    | ---                        |
 | `200`  | OK/Success                 |
@@ -90,10 +91,12 @@ webmaster.yandex.com
 {: .-three-column}
 
 ### Common URL Elements
+
 ```text
 https://store.example.com/category/keyword?id=123#top
 1       2     3       4   5 6              7     8
 ```
+
 | `1` | Protocol |
 | `5` | Subfolder/path |
 | `2` | Subdomain |
