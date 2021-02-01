@@ -38,7 +38,6 @@ These affect how you show up in search results
 ```html
 <img src="img/keyword.jpg" alt="description of image" width="100" height="100">
 ```
-
 - Providing image height and width improves page speed
 
 ## Hyperlinks
@@ -63,6 +62,7 @@ width="100"></a>
 
 ## HTTP Status Codes
 
+### Important status codes
 | Code   | Meaning                    |
 | ---    | ---                        |
 | `200`  | OK/Success                 |
@@ -75,6 +75,7 @@ width="100"></a>
 
 
 ## Webmaster Tools
+{: .-one-column}
 
 ```scss
 Google Search Console
@@ -85,42 +86,45 @@ Yandex
 webmaster.yandex.com
 ```
 
-## Canonicalization
+## URLs
+{: .-three-column}
 
-```scss
-Preferred URL = https://example.com/
-• Place the following in <head> section to
- indicate preferred URL:
+### Common URL Elements
+```text
+https://store.example.com/category/keyword?id=123#top
+1       2     3       4   5 6              7     8
+```
+| Index | Type             |
+| ---   | ---              |
+| 1     | Protocol         |
+| 5     | Subfolder/path   |
+| 2     | Subdomain        |
+| 6     | Page             |
+| 3     | Root domain      |
+| 7     | Parameter        |
+| 4     | Top-level domain |
+| 8     | Named anchor     |
 
+### Tips
+- Choose shorter, human-readable URLs with descriptive keywords
+- Exclude dynamic parameters when possible (see [Canonicalization](#canonicalization) and [Pagination](#pagination))
+- When possible, place content on the same subdomain to preserve authority
+
+### Canonicalization
+
+- Preferred URL = https://example.com/
+Place the following in <head> section to indicate preferred URL:
+```html
  <link href="https://example.com/" rel=
  "canonical" />
-More information at mz.cm/canonical
 ```
-
-## URLs
-
-```scss
-Common URL Elements
-https://store.example.com/category/keyword?id=123#top
-1 2 3 4 5 6 7 8
-1. Protocol
-5. Subfolder/path
-2. Subdomain
-6. Page
-3. Root domain
-7. Parameter
-4. Top-level domain
-8. Named anchor
-
-• Choose shorter, human-readable URLs with descriptive keywords
-• Exclude dynamic parameters when possible (see “Canonicalization” and “Pagination”)
-• When possible, place content on the same subdomain to preserve authority
-```
+More information at: [mz.cm/canonical](mz.cm/canonical)
 
 ## Robots Exclusion Standard
 
-```scss
-Robots.txt
+### Example
+#### Robots.txt
+```text
 Location: https://example.com/robots.txt
 User-agent: googlebot
 Disallow: /example.html
@@ -134,46 +138,41 @@ Meta Robots
 Location: In the HTML <head>
 <meta name="robots" content="[PARAMETER]" />
 More information at mz.cm/x-robots
+```
+- Only Meta Robots and X-Robots-Tag remove URLs from search results
+- Don’t block CSS or JavaScript files with robots.txt
 
-• Only Meta Robots and X-Robots-Tag remove
- URLs from search results
-• Don’t block CSS or JavaScript files with
- robots.txt
- 
- Important Parameters
-• Noindex (do not index)
-• Nofollow (do not follow links)
-• Noarchive (do not show cache)
-...or combine (noindex, nofollow)
-If the robots <META> tag is not defined, the
-default is "INDEX, FOLLOW"
+### Important Parameters
+- Noindex (do not index)
+- Nofollow (do not follow links)
+- Noarchive (do not show cache)
+Note that you can combine them (noindex, nofollow)
+If the robots <META> tag is not defined, the default is "INDEX, FOLLOW"
 Don’t block noindex URLs in robots.txt.
 They need to be crawled to be respected.
 
-```
+
 ## Important User Agents
 
-```scss
+### List
 For Robots.txt, Robots Meta Tags, and X-Robots-Tag:
-• Googlebot (can be used as default for most
- Google crawlers)
-• Googlebot-News
-• Googlebot-Image
-• AdsBot-Google
-• Mediapartners-Google (Mobile Adsense)
- or Mediapartners
-• Googlebot-Video
-• Bingbot
-• Yandexbot
-• Baiduspider
-• FacebookExternalHit
-• Applebot
-• Slurp
-• Twitterbot
-• Rogerbot
-• Dotbot
-• Wildcard for all robots: *
-```
+- Googlebot (can be used as default for most Google crawlers)
+- Googlebot-News
+- Googlebot-Image
+- AdsBot-Google
+- Mediapartners-Google (Mobile Adsense) or Mediapartners
+- Googlebot-Video
+- Bingbot
+- Yandexbot
+- Baiduspider
+- FacebookExternalHit
+- Applebot
+- Slurp
+- Twitterbot
+- Rogerbot
+- Dotbot
+- Wildcard for all robots: *
+
 
 ## Sitemap Syntax
 
@@ -209,9 +208,9 @@ lastmod: the last modified date
  Large websites should use multiple sitemaps
  listed under a single sitemap index file.
 Other Common Sitemap Types:
-• Images
-• Video
-• News
+- Images
+- Video
+- News
 * Don't forget to submit your sitemap to Google
  via Google Search Console.
 ```
@@ -255,11 +254,11 @@ Platforms that support Open Graph protocol include Facebook,
 Twitter, LinkedIn, and Pinterest.
 Optimal Image Sizing
  Twitter:
- • Minimum 144x144 px
- • No larger than 4096x4096 px or 5MB
+ - Minimum 144x144 px
+ - No larger than 4096x4096 px or 5MB
  Facebook:
- • Minimum 600x600 px
- • Try to use images that are at least 1080 px in width
+ - Minimum 600x600 px
+ - Try to use images that are at least 1080 px in width
 ```
 
 ## Rich Snippets and Structured Data
@@ -308,15 +307,15 @@ Reviews
 Review stars won’t show up in search results.
 
 Common Structured Data Types:
-• Local business
-• FAQ page
-• Person
-• How to
+- Local business
+- FAQ page
+- Person
+- How to
 More information at mz.cm/rich-snippets
-• Product
-• Article
-• Recipes
-• QApage
+- Product
+- Article
+- Recipes
+- QApage
 ```
 
 ## Page Speed
@@ -337,11 +336,10 @@ More information at mz.cm/rich-snippets
 - GTmetrix: gtmetrix.com
 - WebPageTest: webpagetest.org
 
-## Image Optimization
+### Image Optimization
 
 The most common culprit of poor page speed is images!
 
-Image Optimization Tips:
 - Compress your images & experiment with quality settings
 - Remove unnecessary image metadata
 - Explore lazy loading
@@ -351,14 +349,9 @@ Image Optimization Tips:
 
 ## Modern JavaScript Sites
 
-JavaScript Tips:
-- Keep JavaScript bundles small (especially for mobile devices). Small bundles improve
- speed, lower memory usage, and reduce CPU costs.
-- Use server-side or pre-rendering to improve site speed, user experience,
- and crawler accessibility.
-- Stuck with client-side rendering? Try pre-rendering to help Googlebot get a
- more immediate HTML snapshot of your page.
-- Use Chrome Dev Tools “Performance” tab to test your runtime performance
- and network “throttling” to simulate different device capabilities.
-- Explore Chrome DevTools’ Timeline & JavaScript Profiler to analyze the impact
-of your JavaScript.
+### JavaScript Tips
+- Keep JavaScript bundles small (especially for mobile devices). Small bundles improve speed, lower memory usage, and reduce CPU costs.
+- Use server-side or pre-rendering to improve site speed, user experience, and crawler accessibility.
+- Stuck with client-side rendering? Try pre-rendering to help Googlebot get a more immediate HTML snapshot of your page.
+- Use Chrome Dev Tools “Performance” tab to test your runtime performance and network “throttling” to simulate different device capabilities.
+- Explore Chrome DevTools’ Timeline & JavaScript Profiler to analyze the impact of your JavaScript.
