@@ -94,16 +94,14 @@ webmaster.yandex.com
 https://store.example.com/category/keyword?id=123#top
 1       2     3       4   5 6              7     8
 ```
-| Index | Type             |
-| ---   | ---              |
-| 1     | Protocol         |
-| 5     | Subfolder/path   |
-| 2     | Subdomain        |
-| 6     | Page             |
-| 3     | Root domain      |
-| 7     | Parameter        |
-| 4     | Top-level domain |
-| 8     | Named anchor     |
+| `1` | Protocol |
+| `5` | Subfolder/path |
+| `2` | Subdomain |
+| `6` | Page |
+| `3` | Root domain |
+| `7` | Parameter |
+| `4` | Top-level domain |
+| `8` | Named anchor |
 
 ### Tips
 - Choose shorter, human-readable URLs with descriptive keywords
@@ -112,11 +110,10 @@ https://store.example.com/category/keyword?id=123#top
 
 ### Canonicalization
 
-- Preferred URL = https://example.com/
-Place the following in <head> section to indicate preferred URL:
+- Preferred URL `https://example.com`
+Place the following in `<head>`` section to indicate preferred URL:
 ```html
- <link href="https://example.com/" rel=
- "canonical" />
+ <link href="https://example.com/" rel="canonical" />
 ```
 More information at: [mz.cm/canonical](mz.cm/canonical)
 
