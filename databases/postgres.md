@@ -19,5 +19,5 @@ brew services start postgresql
 ### Log locations
 
 ```shell
-/usr/local/var/log/postgres.log 
+/usr/local/var/log/postgres.log
 ```

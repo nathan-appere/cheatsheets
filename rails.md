@@ -1,6 +1,7 @@
 ---
 title: Rails
 category: Rails
+type: personal
 ---
 
 # Rails
