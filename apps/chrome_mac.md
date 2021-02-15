@@ -1,7 +1,7 @@
 ---
 title: Chrome
-category: Git
-description: Various chrome things I keep forgetting.
+category: Applications
+description: Various tips & shortcuts for Chrome
 type: personal
 ---
 

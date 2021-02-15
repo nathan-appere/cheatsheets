@@ -1,7 +1,11 @@
 ---
 title: TablePlus
-category: Apps
+category: Applications
+description: Various shortcuts for TablePlus
+type: personal
 ---
+
+## Shortcuts
 
 ### Cascade Delete
 

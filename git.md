@@ -1,6 +1,7 @@
 ---
 title: Git
 category: Git
+description: Git commands arround commits, stash, staging
 type: personal
 ---
 
@@ -48,4 +49,3 @@ Warning: this is incompatible with stashing unstaged files somehow.
 $ git stash -k -u
 ```
 Stash unstaged files & untracked files (-u).
-

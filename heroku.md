@@ -1,7 +1,7 @@
 ---
 title: Heroku multiple accounts
 category: services
-intro: How to use multiple heroku accounts, branches, fork heroku apps,
+intro: How to use multiple heroku accounts, branches, fork heroku apps
 keywords:
   - Heroku
   - Heroku cli

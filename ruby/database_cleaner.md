@@ -1,7 +1,7 @@
 ---
 title: Database Cleaner
 category: help
-intro: Database cleaner RSpec setup
+description: Database cleaner RSpec setup
 keywords:
   - Ruby
   - Rails

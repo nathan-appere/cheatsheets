@@ -1,20 +1,23 @@
 ---
 title: PostgreSQL
 category: Databases
+type: personal
 ---
 
 # PG
 
 ## On Mac
 
-### Starting issues debug
-- https://thoughtbot.com/blog/macos-postgres-could-not-connect-to-server
-
 ### Start services with brew
 
 ```shell
 brew services start postgresql
 ```
+
+## Troubleshooting
+
+### Starting issues debug
+- https://thoughtbot.com/blog/macos-postgres-could-not-connect-to-server
 
 ### Log locations
 
