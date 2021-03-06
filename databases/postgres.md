@@ -14,7 +14,6 @@ keywords:
 # PG
 
 ## Local install on Mac
-{: .-two-column}
 
 ### Debugging starting issues
 {: .-intro}
@@ -119,7 +118,7 @@ REASSIGN OWNED BY username TO postgres;
 ```
 
 ## Application users setup
-{: .-two-column}
+{: .-one-column}
 
 I tend to use 3 roles: a simple `readonly` one (often going to a read-replica), `write` for row creation or update, `ops` for migrations.
 
