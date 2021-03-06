@@ -14,6 +14,7 @@ keywords:
 # PG
 
 ## Local install on Mac
+{: .-two-column}
 
 ### Debugging starting issues
 {: .-intro}
@@ -27,10 +28,11 @@ brew services start postgresql
 ### Log locations
 
 ```shell
-/usr/local/var/log/postgres.log 
+/usr/local/var/log/postgres.log
 ```
 
 ## On AWS
+{: .-two-column}
 
 ### References
 {: .-intro}
@@ -45,6 +47,7 @@ brew services start postgresql
 `db.m6g.large` + `100go` + `General purpose SSD storage` (avoids extra IOPS costs)
 
 ## Roles & Permissions
+{: .-two-column}
 
 ### List users & their privileges
 ```sql
@@ -116,6 +119,7 @@ REASSIGN OWNED BY username TO postgres;
 ```
 
 ## Application users setup
+{: .-two-column}
 
 I tend to use 3 roles: a simple `readonly` one (often going to a read-replica), `write` for row creation or update, `ops` for migrations.
 
@@ -167,4 +171,3 @@ Note: in PostgreSQL, only the owner of a database can drop a database. This is a
 
 - [Managing PostgreSQL users and roles](https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/)
 - [How to create a read-only user?](https://tableplus.com/blog/2018/04/postgresql-how-to-create-read-only-user.html)
-
