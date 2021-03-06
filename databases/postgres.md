@@ -83,6 +83,13 @@ WHERE
   table_schema = 'public';
 ```
 
+### List databases a user can connect to
+```sql
+SELECT datname
+FROM pg_database
+WHERE has_database_privilege('username', datname, 'CONNECT')
+```
+
 ### Schema permissions
 ```sql
 SELECT
@@ -107,14 +114,23 @@ FROM
 Some context for [AWS](https://dba.stackexchange.com/questions/226784/cannot-revoke-permissions-or-drop-user-in-pgsql-aws-rds) and the lack of `superuser` privileges.
 
 ```sql
-REVOKE ALL PRIVILEGES ON public FROM username;
+REASSIGN OWNED BY username TO postgres;
+```
+Note: does not affect objects within other databases, so repeat for all DBs where the role owns anything.
 
-DROP ROLE username;
+```sql
+DROP OWNED BY username;
+```
+Drops all the objects within the current database that are owned by the role.
+
+```sql
+REVOKE ALL PRIVILEGES IN SCHEMA public FROM username;
 ```
 
-You might need to reassign objects owned by the role for the `DROP` command to work:
 ```sql
-REASSIGN OWNED BY username TO postgres;
+DROP ROLE username;
+/* OR */
+DROP USER username;
 ```
 
 ## Application users setup
