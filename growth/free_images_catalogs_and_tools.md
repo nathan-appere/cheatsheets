@@ -40,6 +40,7 @@ keywords:
 {: .-intro}
 - [ImageColorPicker](https://imagecolorpicker.com/) _Color pick inside pictures & generate palettes_
 - [RemoveBg](https://www.remove.bg/) _Remove image background_
+- [BgGenerator](http://bg.siteorigin.com/) _Generate background image from hex color)
 
 ### Color palettes
 {: .-intro}
@@ -51,6 +52,7 @@ keywords:
 ### Favicon tools
 {: .-intro}
 - [Favicon Generator](https://www.favicon-generator.org/) _Generate favicon varitations & css_
+- [Emojicons](https://emojicons.netlify.app/) _Get the SVG of an emoticon to make it a favicon!_
 
 ### SVG tools
 {: .-intro}

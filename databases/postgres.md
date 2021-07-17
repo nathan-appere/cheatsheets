@@ -114,23 +114,21 @@ FROM
 Some context for [AWS](https://dba.stackexchange.com/questions/226784/cannot-revoke-permissions-or-drop-user-in-pgsql-aws-rds) and the lack of `superuser` privileges.
 
 ```sql
+/* Note: does not affect objects within other databases, so repeat for all DBs where the role owns anything. */
 REASSIGN OWNED BY username TO postgres;
-```
-Note: does not affect objects within other databases, so repeat for all DBs where the role owns anything.
 
-```sql
-DROP OWNED BY username;
-```
-Drops all the objects within the current database that are owned by the role.
+/* Drops all the objects within the current database that are owned by the role. */
+DROP     OWNED BY username;
 
-```sql
-REVOKE ALL PRIVILEGES IN SCHEMA public FROM username;
+DROP         ROLE username;
 ```
 
+The following might be necessary:
+
 ```sql
-DROP ROLE username;
-/* OR */
-DROP USER username;
+REVOKE ALL PRIVILEGES ON ALL TABLES    IN SCHEMA public FROM username;
+REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM username;
+REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM username;
 ```
 
 ## Application users setup
@@ -186,3 +184,14 @@ Note: in PostgreSQL, only the owner of a database can drop a database. This is a
 
 - [Managing PostgreSQL users and roles](https://aws.amazon.com/blogs/database/managing-postgresql-users-and-roles/)
 - [How to create a read-only user?](https://tableplus.com/blog/2018/04/postgresql-how-to-create-read-only-user.html)
+
+### Password generation
+
+- 8 to 128 characters.
+- Must url encode special characters.
+
+```
+pwgen 128 3
+```
+
+- https://jasonaowen.net/blog/2017/Feb/09/aws-postgresql-rds-passwords/
