@@ -7,6 +7,12 @@ type: personal
 
 ## Commit
 
+### Only commit files in specific dir
+
+```shell
+git commit -m "Message" -- ./dir
+```
+
 ### Undo last commit
 
 ```shell
@@ -24,6 +30,12 @@ Stash changes + undo the last commit + re-add changes.
 
 ```shell
 $ git commit --allow-empty -m "Trigger re-deploy"
+```
+
+### Show commit content
+
+```shell
+git diff COMMIT^!
 ```
 
 ## Staging
