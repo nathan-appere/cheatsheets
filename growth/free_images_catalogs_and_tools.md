@@ -35,6 +35,7 @@ keywords:
 ### Editors
 {: .-intro}
 - [Canva](https://www.canva.com/) _Create beautiful designs (ads, flyers, ...), huge free templates catalog!_
+- [SvgViewer](https://www.svgviewer.dev/) _Edit SVG inline_
 
 ### Image tools
 {: .-intro}
