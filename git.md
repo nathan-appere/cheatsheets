@@ -61,3 +61,15 @@ Warning: this is incompatible with stashing unstaged files somehow.
 $ git stash -k -u
 ```
 Stash unstaged files & untracked files (-u).
+
+## List branches
+
+### List branches that are ONLY local
+
+```
+git branch -vv | cut -c 3- | awk '$3 !~/\[/ { print $1 }'
+```
+
+## Rebase
+
+- https://coderwall.com/p/xzsr9g/rebasing-dependent-branches-with-git
